@@ -144,8 +144,8 @@
  */
 #define RESET_PERIOD (2592000000) //30 days
 #define SAMPLING_TIME (10000) // 10 seconds
-#define DEVICE_NAME "AVA sensor V1"
-#define FIRMWARE_VERSION "1.3.3"
+#define DEVICE_NAME "AVA sensor V2"
+#define FIRMWARE_VERSION "2.0.1"
 
 /**
  * @brief Serial debug enable 

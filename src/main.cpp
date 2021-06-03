@@ -55,7 +55,7 @@ void DeviceUpdateDataCore()
     device_manager->updateDataCore();
     device_manager->printData();
     //switch state
-    if(device_manager->getState().entry == 1)
+    if(device_manager->getState().entry == 2)
     {
       device_manager->switchState(DEVICE_STATE_LOG_DATA); //log data to SD card
     }
@@ -318,7 +318,8 @@ void setup() {
                                         device_manager->getConnectionStatus().sht85, 
                                         device_manager->getConnectionStatus().als_toxic_no2_o3,
                                         device_manager->getConnectionStatus().als_toxic_co_so2,
-                                        device_manager->getConnectionStatus().ds3231);
+                                        device_manager->getConnectionStatus().ds3231,
+                                        device_manager->getConnectionStatus().gps);
   // delay(3000);
   // initialize connected devices
   device_manager->initConnectedDevices();
