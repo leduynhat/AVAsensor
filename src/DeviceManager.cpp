@@ -2,6 +2,7 @@
 #include "esp_task_wdt.h"
 #include "WiFi.h"
 #include "Queue.h"
+#include "config.h"
 
 #define _SERIAL_DEBUG_ 
 #define WDT_TIMEOUT 62 
@@ -111,7 +112,7 @@ void DeviceManager::checkConnectedDevices() {
     else {
         this->connected_devices_status.ds3231=DEVICE_DISCONNECTED;
         #ifdef _SERIAL_DEBUG_DEVICE_MANAGER_
-            ESP_LOGE(DEVICETAG, "DS3231 no found!");
+            // ESP_LOGE(DEVICETAG, "DS3231 no found!");
         #endif
     }
 
@@ -126,7 +127,7 @@ void DeviceManager::checkConnectedDevices() {
     else {
         this->connected_devices_status.sd_card=DEVICE_DISCONNECTED;
         #ifdef _SERIAL_DEBUG_DEVICE_MANAGER_
-            ESP_LOGE(DEVICETAG, "SD card no found!");
+            // ESP_LOGE(DEVICETAG, "SD card no found!");
         #endif
     }
 
@@ -141,7 +142,7 @@ void DeviceManager::checkConnectedDevices() {
     else {
         this->connected_devices_status.opcn3=DEVICE_DISCONNECTED;
         #ifdef _SERIAL_DEBUG_DEVICE_MANAGER_
-            ESP_LOGE(DEVICETAG, "OPCN3 no found!");
+            // ESP_LOGE(DEVICETAG, "OPCN3 no found!");
         #endif
     }
     if(gps.isConnected()){
@@ -154,7 +155,7 @@ void DeviceManager::checkConnectedDevices() {
     else {
         this->connected_devices_status.gps=DEVICE_DISCONNECTED;
         #ifdef _SERIAL_DEBUG_DEVICE_MANAGER_
-            ESP_LOGE(DEVICETAG, "GPS no found!");
+            // ESP_LOGE(DEVICETAG, "GPS no found!");
         #endif
     }
 }

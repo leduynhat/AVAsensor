@@ -108,7 +108,7 @@
  */
 #define I2C_SDA_PIN (15)
 #define I2C_SCL_PIN (13)
-#define I2C_CLOCK_SPEED (100000)
+#define I2C_CLOCK_SPEED (100000ul)
 
 /**
  * @brief LED pin configuration

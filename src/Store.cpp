@@ -135,7 +135,7 @@ bool Store::logData(const char* _file_name, DataCore _data_core, char* _mac, Tim
     else
     {
         file.close();
-        ESP_LOGE(SDTAG, "CANNOT open file %s", _file_name);
+        // ESP_LOGE(SDTAG, "CANNOT open file %s", _file_name);
         #ifdef _SERIAL_DEBUG_STORE_
             Serial.println("->Try to reconnect SD");
         #endif
